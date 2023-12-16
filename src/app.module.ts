@@ -6,12 +6,14 @@ import { UsersService } from './users/users.service';
 import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
 import { LoggerMiddleware } from './middleware/logger.middlewater';
+import { ProjectService } from './project/project.service';
+import { ProjectModule } from './project/project.module';
 
 @Module({
   // adding for nest-config 
-  imports: [ConfigModule.forRoot({isGlobal: true}),UsersModule], 
+  imports: [ConfigModule.forRoot({isGlobal: true}),UsersModule, ProjectModule], 
   controllers: [AppController, UsersController],
-  providers: [AppService,ConfigService, UsersService],
+  providers: [AppService,ConfigService, UsersService, ProjectService],
 })
 // enroll logger middleware 
 export class AppModule implements NestModule {
