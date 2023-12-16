@@ -14,3 +14,12 @@ $ npm i --save-dev webpack-node-externals run-script-webpack-plugin webpack # ho
 
 </hr>
 
+- RUN DB Container 
+
+```bash 
+$ docker-compose up -d
+$ docker exec -it [container] /bin/bash
+$ mysql -uroot -p # root로 접근 
+
+```
+
