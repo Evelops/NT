@@ -10,8 +10,9 @@ npm install -g @nestjs/cli # not use fastify
 npm i --save @nestjs/config # nest config : using dotenv serviceConfig 
 npm i --save-dev webpack-node-externals run-script-webpack-plugin webpack # hot realod 
 npm install --save @nestjs/swagger  # swagger 
+npm i typeorm-model-generator -D # ORM generator
+npm install --save @nestjs/typeorm typeorm mysql2 # add orm module with mysql
 ```
-
 
 </hr>
 

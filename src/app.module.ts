@@ -8,13 +8,18 @@ import { UsersModule } from './users/users.module';
 import { LoggerMiddleware } from './middleware/logger.middlewater';
 import { ProjectService } from './project/project.service';
 import { ProjectModule } from './project/project.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ormConfig } from './configs/orm.config';
 
 @Module({
   // adding for nest-config 
-  imports: [ConfigModule.forRoot({isGlobal: true}),UsersModule, ProjectModule], 
+  imports: [ConfigModule.forRoot({isGlobal: true}),
+  TypeOrmModule.forRootAsync({useClass: ormConfig,}),
+  UsersModule, ProjectModule],
   controllers: [AppController, UsersController],
   providers: [AppService,ConfigService, UsersService, ProjectService],
 })
+
 // enroll logger middleware 
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): any {
