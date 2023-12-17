@@ -6,11 +6,12 @@
 > LOG 
 
 ```bash
-$ npm install -g @nestjs/cli # not use fastify
-$ npm i --save @nestjs/config # nest config : using dotenv serviceConfig 
-$ npm i --save-dev webpack-node-externals run-script-webpack-plugin webpack # hot realod 
-
+npm install -g @nestjs/cli # not use fastify
+npm i --save @nestjs/config # nest config : using dotenv serviceConfig 
+npm i --save-dev webpack-node-externals run-script-webpack-plugin webpack # hot realod 
+npm install --save @nestjs/swagger  # swagger 
 ```
+
 
 </hr>
 
