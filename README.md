@@ -18,9 +18,8 @@ npm install --save @nestjs/swagger  # swagger
 - RUN DB Container 
 
 ```bash 
-$ docker-compose up -d
-$ docker exec -it [container] /bin/bash
-$ mysql -uroot -p # root로 접근 
-
+docker-compose up -d
+docker-compose ps
+docker-compose exec maria mysql -u admin -p # input pwd 
 ```
 
