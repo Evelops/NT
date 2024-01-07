@@ -2,7 +2,6 @@
 
 - Migrating from ENS(express node sequelize) to NT(nest typeorm) Practice
 
-
 > LOG 
 
 ```bash
